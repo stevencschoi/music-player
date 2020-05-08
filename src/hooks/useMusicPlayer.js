@@ -7,7 +7,7 @@ const useMusicPlayer = () => {
   // play a specific track
   const playTrack = index => {
     if (index === state.currentTrackIndex) {
-      state.audioPlayer.pause();
+      togglePlay();
     } else {
       state.audioPlayer.pause();
       state.audioPlayer = new Audio(state.tracks[index].file);
